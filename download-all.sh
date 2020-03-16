@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e 
-set -x
-mkdir -p ../murray-river-data-downloads
-cat location-download-links.txt|xargs -n 1 wget -P ../murray-river-data-downloads/
+TO=../murray-river-data-downloads
+mkdir -p $TO 
+cat location-download-links.txt|xargs -n 1 wget -P $TO/
