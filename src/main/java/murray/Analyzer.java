@@ -38,7 +38,7 @@ public final class Analyzer {
                         .flatMap(line -> {
                             String id = id(f.getName());
                             String[] items = line.split(",");
-                            String time = items[0];
+                            String time = items[0].replace("09:00:00 ", "");
                             String s = id + "," + time;
                             List<String> list = new ArrayList<>();
                             for (int i = 1; i < items.length; i++) {
